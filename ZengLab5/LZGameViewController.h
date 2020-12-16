@@ -12,6 +12,7 @@
 #import "LZShipView.h"
 #import "LZShip.h"
 #import "NS-Extension.h"
+#import <SpriteKit/SpriteKit.h>
 
 typedef enum
 {
@@ -61,5 +62,8 @@ typedef enum
 // A bit of logic
 - (void)nextMove;
 - (void)GameRestart;
+
+
+@property (strong, nonatomic) SKView *skView;
 
 @end
