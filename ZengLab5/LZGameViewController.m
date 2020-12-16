@@ -167,7 +167,7 @@
 - (void)AIShipPlacement
 {
     // Present Wait View
-    [self.view addSubview: self.waitView];
+    //[self.view addSubview: self.waitView];
     [self doPlacement: self.shipViewBattleship_];
     [self doPlacement: self.shipViewCarrier_];
     [self doPlacement: self.shipViewPatrolBoat_];
@@ -198,7 +198,7 @@
     // AI Turn
     if ([self currentPlayer] == PlayerTwo) {
         // Present Wait View
-        [self.view addSubview: self.waitView];
+        //[self.view addSubview: self.waitView];
         // Calculate and perform click
         BOOL retCode = NO;
         while (true) {
