@@ -153,7 +153,27 @@
 - (void)GameQuitWithReason: (GameReason) reason
 {
     // Show Alert View to glory
-    NSString *msg = [NSString stringWithFormat:@"%@%d%@", @"Congratulation!!! Player ", [[self game] winner] + 1, @" wins the game! Want to play again?", nil];
+    NSString *msg = @"";
+    
+    if ([[self game] gameMode] != HumanVSHuman && [[self game] winner] == 1) {
+        msg = @"Computer wins the game! Want to play again?";
+    } else {
+        msg = [NSString stringWithFormat:@"%@%d%@", @"Congratulation!!! Player ", [[self game] winner] + 1, @" wins the game! Want to play again?", nil];
+    }
+    
+    self.skView = [[SKView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
+        [self.view addSubview:self.skView];
+
+        SKScene *skScene = [SKScene sceneWithSize:self.skView.frame.size];
+        skScene.scaleMode = SKSceneScaleModeAspectFill;
+        skScene.backgroundColor = [UIColor clearColor];
+
+        SKEmitterNode *emitter =  [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"SparkleParticle" ofType:@"sks"]];
+        emitter.position = CGPointMake(self.view.frame.size.width*0.5,0.0);
+
+        [skScene addChild:emitter];
+        [self.skView presentScene:skScene];
+    
     self.resultPopView = [[UIAlertView alloc] initWithTitle:@"Battleship" message:msg delegate: self cancelButtonTitle:nil otherButtonTitles:@"Play Again", nil];
     [[self resultPopView] show];
 }
@@ -162,6 +182,8 @@
 {
     [self restoreEverything];
     [self GamePreparation];
+    
+    [[self skView] removeFromSuperview];
 }
 
 - (void)AIShipPlacement

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E095028258A4AC300C33A57 /* SparkleParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2E095026258A4AC300C33A57 /* SparkleParticle.sks */; };
+		2E095029258A4AC300C33A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E095027258A4AC300C33A57 /* Assets.xcassets */; };
+		2E09502F258A4D3000C33A57 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E09502E258A4D3000C33A57 /* SpriteKit.framework */; };
 		435E453118E72A9000D545DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435E453018E72A9000D545DD /* Foundation.framework */; };
 		435E453318E72A9000D545DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435E453218E72A9000D545DD /* CoreGraphics.framework */; };
 		435E453518E72A9000D545DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435E453418E72A9000D545DD /* UIKit.framework */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E095026258A4AC300C33A57 /* SparkleParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkleParticle.sks; sourceTree = "<group>"; };
+		2E095027258A4AC300C33A57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E09502E258A4D3000C33A57 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		435E452D18E72A9000D545DD /* ZengLab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZengLab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435E453018E72A9000D545DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		435E453218E72A9000D545DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +119,7 @@
 			files = (
 				435E453318E72A9000D545DD /* CoreGraphics.framework in Frameworks */,
 				435E453518E72A9000D545DD /* UIKit.framework in Frameworks */,
+				2E09502F258A4D3000C33A57 /* SpriteKit.framework in Frameworks */,
 				435E453118E72A9000D545DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 		435E452F18E72A9000D545DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E09502E258A4D3000C33A57 /* SpriteKit.framework */,
 				435E453018E72A9000D545DD /* Foundation.framework */,
 				435E453218E72A9000D545DD /* CoreGraphics.framework */,
 				435E453418E72A9000D545DD /* UIKit.framework */,
@@ -233,6 +241,8 @@
 			children = (
 				43A3D25618E75DE00093C4F9 /* LZGameViewController.h */,
 				43A3D25718E75DE00093C4F9 /* LZGameViewController.m */,
+				2E095026258A4AC300C33A57 /* SparkleParticle.sks */,
+				2E095027258A4AC300C33A57 /* Assets.xcassets */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -323,6 +333,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 435E452418E72A9000D545DD;
@@ -343,6 +354,7 @@
 			files = (
 				43B4587318EA856800F3A835 /* hit.mp3 in Resources */,
 				43A3D24218E72B4D0093C4F9 /* PatrolBoat.png in Resources */,
+				2E095028258A4AC300C33A57 /* SparkleParticle.sks in Resources */,
 				43A3D24418E72B4D0093C4F9 /* Submarine.png in Resources */,
 				43A3D25F18E7C41E0093C4F9 /* GameView.xib in Resources */,
 				43A3D24118E72B4D0093C4F9 /* Cruiser@2x.png in Resources */,
@@ -354,6 +366,7 @@
 				43A3D24518E72B4D0093C4F9 /* Submarine@2x.png in Resources */,
 				43B4587F18EB5F0300F3A835 /* Help.pdf in Resources */,
 				43A3D23E18E72B4D0093C4F9 /* Carrier.png in Resources */,
+				2E095029258A4AC300C33A57 /* Assets.xcassets in Resources */,
 				43B4587418EA856800F3A835 /* miss.mp3 in Resources */,
 				43A3D23D18E72B4D0093C4F9 /* Battleship@2x.png in Resources */,
 				43A3D23C18E72B4D0093C4F9 /* Battleship.png in Resources */,
@@ -517,6 +530,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZengLab5/ZengLab5-Prefix.pch";
 				INFOPLIST_FILE = "ZengLab5/ZengLab5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,6 +545,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZengLab5/ZengLab5-Prefix.pch";
 				INFOPLIST_FILE = "ZengLab5/ZengLab5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
