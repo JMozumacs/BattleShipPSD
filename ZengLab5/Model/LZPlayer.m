@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.ships = [NSMutableArray array];
+        self.hits = [NSMutableArray array];
     }
     return  self;
 }

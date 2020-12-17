@@ -76,6 +76,33 @@ typedef enum
     return hit_f;
 }
 
+- (BOOL)canShootAtTarget:(CGPoint)point ForPlayer:(int)player
+{
+    NSInteger xIndex = point.x / CELLSIZE;
+    NSInteger yIndex = point.y / CELLSIZE;
+    
+    NSInteger segment = yIndex * 10 + xIndex;
+    
+    LZPlayer *currentPlayer = player == 0 ? _playerOne : _playerTwo;
+    
+    NSNumber *segmentObj = [NSNumber numberWithInteger: segment];
+    
+    BOOL canHit = YES;
+    
+    for (NSNumber *_number in [currentPlayer hits]) {
+        if ([_number intValue] == [segmentObj intValue]) {
+            canHit = NO;
+            break;
+        }
+    }
+    
+    if (canHit) {
+        [[currentPlayer hits] addObject: segmentObj];
+    }
+    
+    return canHit;
+}
+
 - (BOOL)isWin
 {
     BOOL playerOneWin = YES;

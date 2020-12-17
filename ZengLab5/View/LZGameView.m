@@ -91,8 +91,13 @@
 - (void)doTap:(UITapGestureRecognizer *)gestureRecognizer
 {
     CGPoint tapPoint = [gestureRecognizer locationInView:self];
+    
+    PlayerNumber currentPlayer = [(LZGameViewController*)[self delegate] currentPlayer];
+    
+    BOOL canHit = [[(LZGameViewController*)[self delegate] game] canShootAtTarget:tapPoint ForPlayer:currentPlayer];
+    
     // Avoid Trigger when game is over
-    if ([[(LZGameViewController*)[self delegate] game] gameState] == GameStatePlaying) {
+    if ((canHit) && ([[(LZGameViewController*)[self delegate] game] gameState] == GameStatePlaying)) {
         [self addTargetViewAtPoint:tapPoint];
     }
 }
