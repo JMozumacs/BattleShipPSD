@@ -46,6 +46,7 @@ typedef enum
 
 - (BOOL)handleGridTapPoint:(CGPoint)point ForPlayer: (int) player;
 - (BOOL)isWin;
+- (BOOL)canShootAtTarget:(CGPoint)point ForPlayer:(int)player;
 
 // AI
 - (CGPoint)calculateAIHitPoint: (BOOL) hit_f;
