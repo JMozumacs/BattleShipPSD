@@ -24,5 +24,6 @@ typedef enum
 @property (nonatomic)           NSInteger playerID;
 
 @property (nonatomic, strong)   NSMutableArray *ships;
+@property (nonatomic, strong)   NSMutableArray *hits;
 
 @end
