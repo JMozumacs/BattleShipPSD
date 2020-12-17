@@ -115,7 +115,7 @@
         targetView.alpha = 0.6;
         targetView.layer.cornerRadius = CELLSIZE/2.0;
         [targetView setBackgroundColor:[UIColor grayColor]];
-        if (currentPlayer == PlayerOne) {
+        if (currentPlayer == PlayerOne || currentPlayer == PlayerComputer) {
             [targetView setTag: 10];
         } else {
             [targetView setTag: 11];

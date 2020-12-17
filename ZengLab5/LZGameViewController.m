@@ -226,7 +226,12 @@
         while (true) {
             CGPoint aiPoint = [[self game] calculateAIHitPoint: retCode];
 
-            retCode = [self.shipHitView addTargetViewAtPoint: aiPoint];
+            if ([self currentPlayer] == PlayerComputer) {
+                retCode = [self.shipLocationView addTargetViewAtPoint: aiPoint];
+            } else {
+                retCode = [self.shipHitView addTargetViewAtPoint: aiPoint];
+            }
+            
             if (retCode == NO) {
                 break;
             }
